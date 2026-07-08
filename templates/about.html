@@ -1,68 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>About - OptiCrop</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f4f4f4;
-            margin:0;
-            padding:0;
-        }
 
-        .navbar{
-            background:green;
-            padding:15px;
-            text-align:center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .navbar a{
-            color:white;
-            text-decoration:none;
-            margin:20px;
-            font-size:18px;
-            font-weight:bold;
-        }
+<title>About | OptiCrop</title>
 
-        .container{
-            width:80%;
-            margin:40px auto;
-        }
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-        h1{
-            color:green;
-            text-align:center;
-        }
-
-        p{
-            font-size:18px;
-            line-height:1.8;
-            text-align:justify;
-        }
-    </style>
 </head>
 
 <body>
 
-<div class="navbar">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/findyourcrop">Find Your Crop</a>
+<!-- ================= BACKGROUND ================= -->
+
+<div class="farm-bg">
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+
+<div class="field">
+
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div>
+
 </div>
+
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<h2>🌱 OptiCrop</h2>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/findyourcrop">Find Your Crop</a></li>
+
+<li><a href="/about">About</a></li>
+
+</ul>
+
+</nav>
 
 <div class="container">
 
-<h1>About OptiCrop</h1>
+<div class="glass">
+
+<h1>🌱 About OptiCrop</h1>
 
 <p>
-OptiCrop is a Machine Learning-based crop recommendation system that helps farmers select the most suitable crop based on soil nutrients and environmental conditions. The system analyzes Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, pH, and rainfall to predict the best crop for cultivation.
+
+OptiCrop is an Artificial Intelligence powered Crop Recommendation System
+developed to assist farmers in selecting the most suitable crop based on
+soil nutrients and environmental conditions.
+
+</p>
+
+</div>
+
+<br><br>
+
+<div class="features">
+
+<div class="card">
+
+<h3>🎯 Our Mission</h3>
+
+<p>
+
+To help farmers improve productivity by recommending the best crop using
+Machine Learning and environmental data.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 AI Technology</h3>
+
+<p>
+
+The system analyzes Nitrogen, Phosphorus, Potassium, Temperature,
+Humidity, pH and Rainfall to generate accurate crop recommendations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌾 Smart Agriculture</h3>
+
+<p>
+
+AI-driven recommendations help reduce farming risks, improve crop yield,
+and support sustainable agriculture.
+
+</p>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="about-box">
+
+<h2>📌 How OptiCrop Works</h2>
+
+<p>
+
+1️⃣ Farmer enters soil nutrient values (N, P, K).<br><br>
+
+2️⃣ Environmental parameters such as Temperature, Humidity,
+Rainfall and pH are provided.<br><br>
+
+3️⃣ Data is standardized using the trained scaler.<br><br>
+
+4️⃣ The Machine Learning model predicts the most suitable crop.<br><br>
+
+5️⃣ The recommended crop is displayed instantly.
+
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h2>💻 Technologies Used</h2>
+
+<p>
+
+✔ Python<br>
+
+✔ Flask Framework<br>
+
+✔ HTML<br>
+
+✔ CSS<br>
+
+✔ NumPy<br>
+
+✔ Pandas<br>
+
+✔ Scikit-learn<br>
+
+✔ Joblib
+
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h2>🚀 Why Choose OptiCrop?</h2>
+
+<p>
+
+✅ Easy to Use Interface<br>
+
+✅ Accurate AI Predictions<br>
+
+✅ Supports Smart Farming<br>
+
+✅ Fast Crop Recommendation<br>
+
+✅ Machine Learning Powered<br>
+
+✅ User Friendly Design
+
+</p>
+
+</div>
+
+<footer>
+
+<h2>🌱 OptiCrop</h2>
+
+<p>
+
+AI Powered Crop Recommendation System
+
 </p>
 
 <p>
-The project uses Python, Pandas, NumPy, Scikit-learn, Flask, HTML, and CSS. Multiple machine learning models were trained and evaluated, and the best-performing model was selected to provide accurate crop recommendations.
+
+Made for Smart Agriculture 🌾
+
 </p>
+
+</footer>
 
 </div>
 
 </body>
+
 </html>

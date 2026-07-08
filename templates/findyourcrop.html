@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Find Your Crop</title>
+<html lang="en">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Find Your Crop | OptiCrop</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
+
+<!-- BACKGROUND -->
+
+<div class="farm-bg">
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🍃</div>
+
+<div class="field">
+
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<div class="crop"></div><div class="crop"></div>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -26,35 +64,107 @@
 
 <div class="container">
 
-<h1>Crop Recommendation</h1>
+<div class="form-card">
+
+<h1>🌾 Crop Recommendation System</h1>
+
+<p style="text-align:center;color:#1b4332;margin-bottom:30px;font-size:18px;font-weight:600;">
+
+Enter your soil nutrients and environmental conditions to get the most suitable crop recommendation.
+
+</p>
 
 <form action="/predict" method="POST">
 
-<input type="number" step="any" name="N" placeholder="Nitrogen (N)" required>
+<div class="form-grid">
 
-<input type="number" step="any" name="P" placeholder="Phosphorus (P)" required>
+<input type="number" step="any" name="N" placeholder="🌿 Nitrogen (N)" required>
 
-<input type="number" step="any" name="K" placeholder="Potassium (K)" required>
+<input type="number" step="any" name="P" placeholder="🧪 Phosphorus (P)" required>
 
-<input type="number" step="any" name="temperature" placeholder="Temperature" required>
+<input type="number" step="any" name="K" placeholder="🌱 Potassium (K)" required>
 
-<input type="number" step="any" name="humidity" placeholder="Humidity" required>
+<input type="number" step="any" name="temperature" placeholder="🌡 Temperature (°C)" required>
 
-<input type="number" step="any" name="ph" placeholder="pH Value" required>
+<input type="number" step="any" name="humidity" placeholder="💧 Humidity (%)" required>
 
-<input type="number" step="any" name="rainfall" placeholder="Rainfall" required>
+<input type="number" step="any" name="ph" placeholder="⚗ Soil pH" required>
 
-<br><br>
+<input type="number" step="any" name="rainfall" placeholder="🌧 Rainfall (mm)" required>
 
-<button type="submit">Predict Crop</button>
+</div>
+
+<button class="predict-btn" type="submit">
+
+🤖 Predict Best Crop
+
+</button>
 
 </form>
 
-<br>
+{% if prediction_text %}
 
-<h2 style="color:green;">
-{{ prediction_text }}
-</h2>
+<div class="result">
+
+🎉 {{ prediction_text }}
+
+</div>
+
+{% endif %}
+
+</div>
+
+<!-- Feature Cards -->
+
+<div class="features">
+
+<div class="card">
+
+<h3>🤖 AI Prediction</h3>
+
+<p>
+
+Our Machine Learning model analyzes all the entered parameters and predicts the best crop with high accuracy.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌾 Soil Analysis</h3>
+
+<p>
+
+Recommendation is based on Nitrogen, Phosphorus, Potassium, pH, Temperature, Humidity and Rainfall.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚜 Smart Farming</h3>
+
+<p>
+
+Increase productivity, reduce farming risks and improve crop yield using AI-powered recommendations.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>🌱 OptiCrop</h2>
+
+<p>AI Powered Smart Agriculture Platform</p>
+
+<p>Helping Farmers Make Better Decisions 🌾</p>
+
+</footer>
 
 </div>
 
